@@ -1,0 +1,64 @@
+// <CONNECTING FONTS>=============================================================
+
+@import "fonts";
+
+// <CONNECTING FONTS>=============================================================
+
+// <DEFAULT FONT>=============================================================
+$fontFamily: NunitoSans_7pt_Condensed;
+$fontSize: 14px;
+$fontWeight: 400;
+// <DEFAULT FONT>=============================================================
+
+// <VARIABLES>=====================================================================
+$maxWidthContainer: 1324;
+$md1: 1030.98;
+$md2: 767.98;
+$md3: 430.98;
+
+$backgroundColor: #F7F7F7;
+$mainColor: #222;
+$blackColor: #010101;
+$whiteColor: #FFF;
+$blueColor: #4F8FF0;
+// <VARIABLES>=====================================================================
+
+// <RESET, GENERAL PARAMETERS>=====================================================
+@import "null";
+
+body {
+    height: 100%;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    color: $mainColor;
+    font-size: $fontSize;
+    line-height: 150%;
+    background-color: $backgroundColor;
+    &._lock {
+        overflow: hidden;
+    }
+}
+// <RESET, GENERAL PARAMETERS>======================================================
+
+// <SHELL>========================================================================
+.wrapper {
+    // min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+// <SHELL>========================================================================
+
+// <MAIN GRID>==================================================================
+[class*="__container"] {
+    padding: 0 15px;
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+// <MAIN GRID>==================================================================
+
+// <CONNECTING PAGE STYLES AND ELEMENTS>=============================================
+@import "header";
+@import "footer";
+// <CONNECTING PAGE STYLES AND ELEMENTS>=============================================
