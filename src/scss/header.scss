@@ -105,20 +105,21 @@
 			text-transform: none;
 			margin-bottom: 48px;
 		}
-	&__btn {
-		display: block;
-		margin: 0 auto;
-		background: $blueColor;
-		border: 2px solid $blueColor;
-		padding: 16px 24px;
-			color: $whiteColor;
-			font-weight: 900;
-			line-height: 120%;
-			text-transform: uppercase;
-	}
 	&__btn-padding {
 		padding-bottom: 268px;
 	}
+}
+
+.section-btn {
+	display: block;
+	margin: 0 auto;
+	background: $blueColor;
+	border: 2px solid $blueColor;
+	padding: 16px 24px;
+		color: $whiteColor;
+		font-weight: 900;
+		line-height: 120%;
+		text-transform: uppercase;
 }
 
 
