@@ -63,6 +63,9 @@ body {
 @import "footer";
 // <CONNECTING PAGE STYLES AND ELEMENTS>=============================================
 
+// SCROLL ANIMATION
+
+
 
 // CONSTANTS
 
@@ -148,8 +151,8 @@ body {
 .cards__card:hover {
     cursor: pointer;
     background: $blueColor;
-    transition: 0.3s;
-    animation: swing 0.6s ease;
+    transition: 0.6s;
+    animation: swing 1s ease;
     svg path {
         transition: 0.3s;
         fill: $whiteColor; /* Новый цвет при наведении */
@@ -208,5 +211,75 @@ body {
     }
     .services__cards {
         flex-direction: column;
+    }
+  }
+
+  @media (max-width: 774px) {
+    svg path {
+        display: none;
+    }
+  }
+
+
+  // ABOUT ============================
+
+
+  .about {
+    background: $whiteColor;
+    padding: 80px 0 80px 0;
+    &__container {
+        gap: 64px;
+        display: flex;
+    }
+    &__title {
+        text-align: left;
+        span {
+            color: $blueColor;
+        }
+    }
+    &__line {
+        margin: 10px 0 24px 0;
+    }
+    &__text {
+        line-height: 150%; /* 24px */
+    }
+  }
+
+  .about__btns {
+
+    gap: 24px;
+    display: flex;
+  }
+
+  .btns {
+    &__history {
+        padding: 16px 24px;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 120%; /* 16.8px */
+        text-transform: uppercase;
+        color: $whiteColor;
+        background: $blueColor;
+        border: 2px solid var(--blue-color-100, $blueColor);
+        border: none;
+    }
+    &__certificates {
+        padding: 16px 24px;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 120%; /* 16.8px */
+        text-transform: uppercase;
+        background: #E6E6E6;
+        border: 2px solid $backgroundColor;
+        border: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+        max-width: 696px;
+    }
+    .right__img {
+        display: none;
     }
   }
