@@ -1,3 +1,9 @@
+@mixin scrollAnim {
+	transform: translate(0px,120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
 .contacts {
 	font-weight: 600px;
 	background: $blackColor;
@@ -22,7 +28,13 @@
 
 @media (max-width: ($md2 + 'px')) {
 	.contacts__mail {
-		display: none;
+		// display: none;
+	}
+}
+
+@media (max-width: 446px) {
+	.header__title {
+		font-size: 40px !important;
 	}
 }
 
@@ -76,6 +88,8 @@
 
 
 
+
+
 .header {
 	color: $whiteColor;
 	text-align: center;
@@ -89,6 +103,11 @@
 		font-size: 30px;
 		margin-top: 150px;
 		line-height: 150%;
+		@include scrollAnim()
+	}
+	&__subtitle._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
 	}
 	&__title {
 			line-height: 150%;
@@ -96,7 +115,13 @@
 			font-size: 56px;
 			color: $blueColor;
 			font-weight: 600;
+			@include scrollAnim
+
 		}
+	&__title._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 	&__text {
 			line-height: 150%;
 			font-size: 20px;
@@ -104,21 +129,33 @@
 			line-height: 120%;
 			text-transform: none;
 			margin-bottom: 48px;
+			@include scrollAnim()
 		}
-	&__btn {
-		display: block;
-		margin: 0 auto;
-		background: $blueColor;
-		border: 2px solid $blueColor;
-		padding: 16px 24px;
-			color: $whiteColor;
-			font-weight: 900;
-			line-height: 120%;
-			text-transform: uppercase;
+	&__text._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
 	}
 	&__btn-padding {
 		padding-bottom: 268px;
 	}
+}
+
+.section-btn {
+	display: block;
+	margin: 0 auto;
+	background: $blueColor;
+	border: 2px solid $blueColor;
+	padding: 16px 24px;
+		color: $whiteColor;
+		font-weight: 900;
+		line-height: 120%;
+		text-transform: uppercase;
+		@include scrollAnim()
+}
+
+.section-btn._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
 }
 
 
