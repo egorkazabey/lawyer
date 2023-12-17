@@ -26,12 +26,6 @@
 	color: $whiteColor !important; 
 }
 
-@media (max-width: ($md2 + 'px')) {
-	.contacts__mail {
-		// display: none;
-	}
-}
-
 @media (max-width: 446px) {
 	.header__title {
 		font-size: 40px !important;
