@@ -409,6 +409,7 @@ body {
 	background: $whiteColor;
 	&__container {
 		padding: 80px 0 80px 0;
+
 	}
 	&__title {
 		text-align: left;
@@ -417,7 +418,6 @@ body {
 		margin: 10px 0;
 	}
 	&__review {
-		width: 648px;
 		padding: 32px;
 		box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.15);
 		background: $whiteColor;
@@ -521,4 +521,89 @@ body {
 			line-height: 120%; /* 16.8px */
 			text-transform: uppercase;
 	}
+}
+
+@media (max-width: 828px) {
+	.reviews__reviews {
+		flex-direction: column;
+	}
+	.top__decoration {
+		display: none;
+	}
+}
+
+// MATERIALS ===============================================================
+
+.materials {
+	padding: 80px 0 80px 0;
+	&__elements {
+		margin-top: 48px;
+		display: flex;
+		gap: 24px;
+	}
+	&__btn {
+		display: block;
+		margin: 48px auto;
+		border: 2px solid $blueColor;
+		background: $blueColor;
+		padding: 16px 24px;
+			color: $whiteColor;
+			font-size: 14px;
+			font-weight: 900;
+			line-height: 120%; /* 16.8px */
+			text-transform: uppercase;
+			@include scrollAnim();
+	}
+	&__btn._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.elements__element {
+	padding-bottom: 30px;
+}
+
+.element {
+	&__img {
+		margin-bottom: 25px;
+	}
+	&__title {
+	color: $mainColor;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 150%; /* 24px */
+	@include scrollAnim();
+	}
+	&__title:hover {
+		color: $blueColor;
+		transition: 0.2s;
+	}
+	&__title._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+	&__date {
+		color: $mainColor;
+		margin: 16px 0 16px 0;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 120%; /* 14.4px */
+		@include scrollAnim();
+	}
+	&__date._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+	&__text {
+		color: $mainColor;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 120%; /* 16.8px */
+		@include scrollAnim();
+	}
+	&__text._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
 }
